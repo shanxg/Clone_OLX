@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">(Clone) OLX</string>
+    <string name="text_email">Email</string>
+    <string name="text_password">Password</string>
+    <string name="text_sign_in">Sign in</string>
+    <string name="text_access">Access</string>
+    <string name="text_register">Register</string>
+    <string name="text_sign_complete">Login successful</string>
+    <string name="text_reg_complete">Registration successful</string>
+    <string name="text_sign_out">Sign out</string>
+    <string name="text_sign_register">Sign/Register</string>
+</resources>
