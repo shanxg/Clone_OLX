@@ -6,14 +6,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+
+
 public class ConfigurateFirebase {
 
     public static final String USERS = "users";
-    public static final String xx = "x";
-    public static final String xxx = "x";
-    public static final String xxxx = "x";
-    public static final String xxxxx = "x";
+    public static final String ANNOUNCES = "announces";
+    public static final String MY_ANNOUNCES = "announces_repo";
+    public static final String IMAGES = "images";
 
+    public static final String xxxxx = "x";
     public static final String xxxxxxxxxx  = "x";
     public static final String xxxxxxxxxxx  = "x";
 

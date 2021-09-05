@@ -8,5 +8,63 @@
     <string name="text_sign_complete">Login successful</string>
     <string name="text_reg_complete">Registration successful</string>
     <string name="text_sign_out">Sign out</string>
-    <string name="text_sign_register">Sign/Register</string>
+    <string name="text_sign_register">Sign / Register</string>
+    <string name="text_menu_my_announcements">My Announcements</string>
+    <string name="title_activity_my_announcements">"My Announcements "</string>
+    <string name="text_reg_announcement">Register Announcement</string>
+    <string name="text_announce_title">Title</string>
+    <string name="text_announce_price">R$ 0,00</string>
+    <string name="text_description">Description</string>
+    <string name="text_register_announcement">Register Announcement</string>
+    <string name="text_announce_contact">(00) 999-888-777</string>
+    <string name="text_minimum_imgs">You need at least 1 image to make an announcement!</string>
+    <string name="label_announce_detail">Announcement Details</string>
+
+
+    <string-array name="regions">
+        <item>Region</item>
+
+        <item>AC</item>
+        <item>AL</item>
+        <item>AM</item>
+        <item>AP</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MG</item>
+        <item>MS</item>
+        <item>MT</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>PR</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>RS</item>
+        <item>SC</item>
+        <item>SE</item>
+        <item>SP</item>
+        <item>TO</item>
+    </string-array>
+
+    <string-array name="categories">
+        <item>Category</item>
+
+        <item>Agribusiness</item>
+        <item>Electronics</item>
+        <item>Fashion</item>
+        <item>For Kids</item>
+        <item>Music</item>
+        <item>Properties</item>
+        <item>Sports</item>
+        <item>Vehicles</item>
+    </string-array>
+
 </resources>
+

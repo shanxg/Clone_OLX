@@ -2,14 +2,36 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item
-        android:title="@string/text_sign_register"
-        android:id="@+id/btnSignIn"
-        app:showAsAction="always"/>
+    <group
+        android:id="@+id/group_unlogged"
+        android:visible="false">
+        <item
+            android:id="@+id/btnSignIn"
+            android:title="@string/text_sign_register"
+            app:showAsAction="always" />
+    </group>
 
-    <item
-        android:title="@string/text_sign_out"
-        android:id="@+id/signOut"
-        android:visible="false"
-        app:showAsAction="never"/>
+    <group
+        android:id="@+id/group_logged"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_announcements"
+            android:title="@string/text_menu_my_announcements"
+            android:orderInCategory="1"
+            app:showAsAction="ifRoom"/>
+
+        <item
+            android:id="@+id/menu_refresh"
+            android:title="Refresh"
+            android:icon="@drawable/ic_refresh_white_24dp"
+            android:orderInCategory="2"
+            app:showAsAction="always"/>
+
+        <item
+            android:id="@+id/signOut"
+            android:title="@string/text_sign_out"
+            app:showAsAction="never"
+            android:orderInCategory="100"/>
+    </group>
+
 </menu>

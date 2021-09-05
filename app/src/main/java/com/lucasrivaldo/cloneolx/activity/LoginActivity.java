@@ -2,25 +2,20 @@ package com.lucasrivaldo.cloneolx.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
 import com.lucasrivaldo.cloneolx.R;
 import com.lucasrivaldo.cloneolx.config.ConfigurateFirebase;
 import com.lucasrivaldo.cloneolx.helper.UserFirebase;
 import com.lucasrivaldo.cloneolx.model.User;
 
 import static com.lucasrivaldo.cloneolx.activity.MainActivity.TAG;
-import static com.lucasrivaldo.cloneolx.activity.MainActivity.TEST;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -38,6 +33,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         loadInterface();
     }
@@ -91,29 +88,13 @@ public class LoginActivity extends AppCompatActivity {
 
     /** ####################################  MY METHODS  #################################### **/
 
-    private boolean validateText(String emailText, String pwText){
-
-        if (emailText.isEmpty()) {
-
-            throwToast("User email text is empty", true);
-            return false;
-
-        }else if (pwText.isEmpty()){
-
-            throwToast("User password text is empty", true);
-            return false;
-
-        }else
-            return true;
-    }
-
     private void authUser(String emailText, String pwText){
 
         ConfigurateFirebase.getFirebaseAuth()
                 .signInWithEmailAndPassword(emailText, pwText)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()){
-                        startMainActivity();
+                        finishLogin();
                         throwToast(getResources().getString(R.string.text_sign_complete), false);
 
                     }else {
@@ -154,16 +135,38 @@ public class LoginActivity extends AppCompatActivity {
         user.setEmail(emailText);
         user.setId(UserFirebase.getCurrentUserID());
 
-        if (user.save()) startMainActivity();
+        if (user.save()) finishLogin();
     }
 
-    private void startMainActivity() {
-        startActivity(new Intent(this, MainActivity.class));
+    private void finishLogin() {
         finish();
+    }
+
+    /** #################################  ACTIVITY PROCESS  ################################## **/
+
+    @Override
+    public boolean onNavigateUp() {
+        finishLogin();
+        return true;
     }
 
     /** ####################################  HELPERS  #################################### **/
 
+    private boolean validateText(String emailText, String pwText){
+
+        if (emailText.isEmpty()) {
+
+            throwToast("User email text is empty", true);
+            return false;
+
+        }else if (pwText.isEmpty()){
+
+            throwToast("User password text is empty", true);
+            return false;
+
+        }else
+            return true;
+    }
 
     private void setLogTypeTextColor(){
         if (mSwitchType.isChecked()) {

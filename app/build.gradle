@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 30
@@ -40,6 +39,15 @@ dependencies {
     implementation 'com.google.firebase:firebase-database'
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-storage'
-    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.firebaseui:firebase-ui-storage:0.6.0'
 
+    // Masks Dependencies
+    implementation 'com.github.BlacKCaT27:CurrencyEditText:2.0.2'
+    implementation 'com.github.santalu:maskara:1.0.0'
+
+    // Spots Dialog
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
+
+    implementation 'com.synnapps:carouselview:0.1.5'
 }
+apply plugin: 'com.google.gms.google-services'
