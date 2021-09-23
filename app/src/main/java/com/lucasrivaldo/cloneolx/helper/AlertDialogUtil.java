@@ -18,8 +18,7 @@ public class AlertDialogUtil {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setTitle("Instructions :");
         builder.setMessage("When you are interested in an announcement, " +
-                "perform a long click on it to open the announcement details.\n" +
-                "And double-click to");
+                "perform a long click on it to open the announcement details.");
         builder.setCancelable(false);
         builder.setPositiveButton("OK", (dialog, which) -> {});
 
