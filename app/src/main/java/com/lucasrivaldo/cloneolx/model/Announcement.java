@@ -66,8 +66,8 @@ public class Announcement implements Serializable {
                         .child(this.getId());
 
 
-        myAnnouncesRef.removeValue(mRemoveListener);
-        announcesRef.removeValue(mRemoveListener);
+        myAnnouncesRef.removeValue();
+        announcesRef.removeValue();
 
     }
 
@@ -80,7 +80,7 @@ public class Announcement implements Serializable {
                         .child(this.getCategory())
                         .child(this.getId());
 
-        announcesRef.removeValue(mRemoveListener);
+        announcesRef.removeValue();
     }
 
     @Exclude
@@ -109,15 +109,4 @@ public class Announcement implements Serializable {
     public void setContact(String contact) { this.contact = contact; }
     public void setPrice(String price) { this.price = price; }
 
-
-    private static DatabaseReference.CompletionListener mRemoveListener =
-            (error, ref) -> {
-                if (error == null) {
-                    Log.d(TAG, "Removed: " + ref);
-                    // or you can use:
-                    System.out.println("Removed: " + ref);
-                } else {
-                    Log.e(TAG, "Remove of " + ref + " failed: " + error.getMessage());
-                }
-            };
 }

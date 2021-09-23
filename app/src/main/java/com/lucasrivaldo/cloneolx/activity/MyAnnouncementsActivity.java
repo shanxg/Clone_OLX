@@ -136,42 +136,12 @@ public class MyAnnouncementsActivity extends AppCompatActivity {
                         .child(announcement.getOwnerId())
                         .child(announcement.getId());
 
-        announcesRef.removeValue().addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
+        announcesRef.removeValue();
+        myAnnouncesRef.removeValue();
 
-                myAnnouncesRef.removeValue().addOnCompleteListener(task1 ->{
-
-                    if (task1.isSuccessful()){
-
-                        mAnnouncementList.remove(announcement);
-                        mAdapterAnnouncements.notifyDataSetChanged();
-                        throwToast("Announcement cancelled.", false);
-
-                    }else {
-
-                        String exception ;
-                        try{ throw task.getException(); }
-                        catch (Exception e){
-                            exception = e.getMessage();
-                            e.printStackTrace();
-                        }
-                        throwToast("Delete failure: \n"+ exception,true);
-                    }
-                });
-
-            }else {
-
-                String exception ;
-                try{ throw task.getException(); }
-                catch (Exception e){
-                    exception = e.getMessage();
-                    e.printStackTrace();
-                }
-                throwToast("Delete failure: \n"+ exception,true);
-            }
-        });
-
-        Log.d(TEST, "cancel: \n" + myAnnouncesRef.toString()+"\n" + announcesRef.toString());
+        mAnnouncementList.remove(announcement);
+        mAdapterAnnouncements.notifyDataSetChanged();
+        throwToast("Announcement cancelled.", false);
     }
 
     /** ##################################  CLICK LISTENERS  ################################## **/
