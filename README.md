@@ -35,8 +35,7 @@
   > ### <div align="center"> *Login & Register* </div> 
   > <br> 
   >
-  >  ![OLX_login Register(fir)](https://user-images.githubusercontent.com/63316622/135892287-5acd899a-fb4b-4c39-b8c7-8dabccc14e4f.gif)
-![OLX_login Register(fir)](https://user-images.githubusercontent.com/63316622/135891986-769d6e98-0dc9-4b64-a101-0a1bc0c151c7.gif)
+  > ![OLX_login Register](https://user-images.githubusercontent.com/63316622/135895808-bffe73e8-7bdf-4122-9f72-a8c702df1294.gif)  ![OLX_login Register(fir)](https://user-images.githubusercontent.com/63316622/135891986-769d6e98-0dc9-4b64-a101-0a1bc0c151c7.gif)
   >
   > <br>
   
@@ -47,7 +46,8 @@
   > ### <div align="center"> *Publishing Announcement* </div> 
   > <br> 
   >
-  > ![OLX_register_post(fir)](https://user-images.githubusercontent.com/63316622/135892355-5bb6f3d1-7912-4de8-afde-4104f4601096.gif)![OLX_register_post(fir)](https://user-images.githubusercontent.com/63316622/135892378-9e132b92-c64b-401c-8425-724e4b3e330a.gif)
+  > ![OLX_register_post](https://user-images.githubusercontent.com/63316622/135895851-23ee3fba-9593-4a11-8b30-80eb29a194f9.gif)
+  ![OLX_register_post(fir)](https://user-images.githubusercontent.com/63316622/135892378-9e132b92-c64b-401c-8425-724e4b3e330a.gif)
   >
   > <br>
   ---------------------------------
