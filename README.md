@@ -10,12 +10,12 @@
 >> <br />
 > 
 > - ## Demonstration 
->   - [Announcements](https://github.com/shanxg/Clone_Organizze/blob/master/README.md#-registering-new-user-)
->   - [Login & Register](https://github.com/shanxg/Clone_Organizze/blob/master/README.md#-adding-an-expense-transaction-)
->   - [Publishing Announcement](https://github.com/shanxg/Clone_Organizze/blob/master/README.md#-adding-an-income-transaction-)
->   - [Delete Announcement](https://github.com/shanxg/Clone_Organizze/blob/master/README.md#-deleting-a-transaction-)
->   - [Search filters]()
->   - ### [Full video demonstration](https://github.com/shanxg/Clone_Organizze/blob/master/README.md#check-demonstration-videos)
+>   - [Announcements](https://github.com/shanxg/Clone_OLX#-announcements-)
+>   - [Login & Register](https://github.com/shanxg/Clone_OLX#-login--register-)
+>   - [Publishing Announcement](https://github.com/shanxg/Clone_OLX#-publishing-announcement-)
+>   - [Delete Announcement](https://github.com/shanxg/Clone_OLX#-deleting-announcement-)
+>   - [Search filters](https://github.com/shanxg/Clone_OLX#-search-filters-)
+>   - ### [Full video demonstration](https://github.com/shanxg/Clone_OLX#check-demonstration-videos)
 >   
 >   <br>
 
