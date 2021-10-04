@@ -25,8 +25,7 @@
   > ### <div align="center"> *Announcements* </div> 
   > <br> 
   >
-  > ![OLX_announcements](https://user-images.githubusercontent.com/63316622/135891237-01178eab-6786-40b5-bf8a-a45672a73932.gif)  ![OLX_announcements(fir)](https://user-images.githubusercontent.com/63316622/135891358-66eac24b-910e-4079-b52e-5538e66cbdfb.gif)
-
+  > ![OLX_announcements](https://user-images.githubusercontent.com/63316622/135891237-01178eab-6786-40b5-bf8a-a45672a73932.gif)
   >
   > <br>
   
