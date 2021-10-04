@@ -178,7 +178,6 @@ public class MainActivity extends AppCompatActivity
 
                 }else { // SET LOOP FOR CATEGORIES SELECTED
 
-
                     for (DataSnapshot region : snapshot.getChildren())
                         for (DataSnapshot category : region.getChildren())
                             if (category.getKey().equals(type))

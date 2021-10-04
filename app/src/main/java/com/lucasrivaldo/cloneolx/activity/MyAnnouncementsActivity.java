@@ -2,7 +2,7 @@ package com.lucasrivaldo.cloneolx.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
@@ -10,9 +10,10 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -30,8 +31,6 @@ import com.lucasrivaldo.cloneolx.model.Announcement;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.lucasrivaldo.cloneolx.activity.MainActivity.TAG;
-import static com.lucasrivaldo.cloneolx.activity.MainActivity.TEST;
 import static com.lucasrivaldo.cloneolx.config.ConfigurateFirebase.ANNOUNCES;
 import static com.lucasrivaldo.cloneolx.config.ConfigurateFirebase.MY_ANNOUNCES;
 
@@ -77,12 +76,13 @@ public class MyAnnouncementsActivity extends AppCompatActivity {
         mRecyclerAnnouncements.setLayoutManager(layoutManager);
         mRecyclerAnnouncements.setHasFixedSize(false);
         mRecyclerAnnouncements.setAdapter(mAdapterAnnouncements);
+        addSwipeMoves();
         setRecyclerAnnouncementsClickListener();
 
         setClickListeners();
     }
 
-    //TODO OPEN ANNOUNCEMENTS DETAILS
+
     private void setRecyclerAnnouncementsClickListener() {
         RecyclerItemClickListener recyclerClickListener =
                 new RecyclerItemClickListener(
@@ -103,45 +103,139 @@ public class MyAnnouncementsActivity extends AppCompatActivity {
                             }
 
                             @Override
-                            public void onLongItemClick(View view, int position) {
-                                Announcement announcement = mAnnouncementList.get(position);
-
-                                //announcement.cancel();
-                                cancel(announcement);
-
-
-                            }
+                            public void onLongItemClick(View view, int position) {}
 
                             @Override
                             public void onItemClick
-                                    (AdapterView<?> adapterView, View view, int i, long l) {
-                            }
+                                    (AdapterView<?> adapterView, View view, int i, long l) {}
                         });
 
         mRecyclerAnnouncements.addOnItemTouchListener(recyclerClickListener);
     }
 
-    private void cancel(Announcement announcement) {
+    public void addSwipeMoves(){
 
-        DatabaseReference announcesRef =
-                ConfigurateFirebase.getFireDBRef()
-                        .child(ANNOUNCES)
-                        .child(announcement.getRegion())
-                        .child(announcement.getCategory())
-                        .child(announcement.getId());
+        ItemTouchHelper.Callback itemTouch = new ItemTouchHelper.Callback() {
+            @Override
+            public int getMovementFlags(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder) {
 
-        DatabaseReference myAnnouncesRef =
-                ConfigurateFirebase.getFireDBRef()
-                        .child(MY_ANNOUNCES)
-                        .child(announcement.getOwnerId())
-                        .child(announcement.getId());
+                int dragFlags = ItemTouchHelper.ACTION_STATE_IDLE;
+                int swipeFlags = ItemTouchHelper.START;
+                //int swipeFlags = ItemTouchHelper.START | ItemTouchHelper.END;
 
-        announcesRef.removeValue();
-        myAnnouncesRef.removeValue();
+                return makeMovementFlags(dragFlags, swipeFlags);
+            }
 
-        mAnnouncementList.remove(announcement);
-        mAdapterAnnouncements.notifyDataSetChanged();
-        throwToast("Announcement cancelled.", false);
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+
+                deleteTransaction(viewHolder);
+            }
+        };
+
+        new ItemTouchHelper(itemTouch).attachToRecyclerView(mRecyclerAnnouncements);
+
+    }
+
+    public void deleteTransaction(RecyclerView.ViewHolder viewHolder){
+
+        new Handler().post(() -> {
+
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+
+            alertDialog.setTitle("Delete announcement:");
+            alertDialog.setMessage("Are you sure, you want to delete this announcement?");
+            alertDialog.setCancelable(false);
+
+            alertDialog.setPositiveButton("YES", (dialog, which) -> {
+
+                int itemPosition = viewHolder.getAdapterPosition();
+                Announcement announcement = mAnnouncementList.get(itemPosition);
+
+                DatabaseReference announcesRef =
+                        ConfigurateFirebase.getFireDBRef()
+                                .child(ANNOUNCES)
+                                .child(announcement.getRegion())
+                                .child(announcement.getCategory())
+                                .child(announcement.getId());
+
+                DatabaseReference myAnnouncesRef =
+                        ConfigurateFirebase.getFireDBRef()
+                                .child(MY_ANNOUNCES)
+                                .child(announcement.getOwnerId())
+                                .child(announcement.getId());
+
+                announcesRef.removeValue().addOnCompleteListener(task -> {
+
+                    if (task.isSuccessful()) {
+
+                        myAnnouncesRef.removeValue()
+                                .addOnCompleteListener(taskMyAnnouncement -> {
+
+                                    if (taskMyAnnouncement.isSuccessful()) {
+
+                                        throwToast("Announcement deleted", true);
+                                        mAnnouncementList.remove(announcement);
+                                        mAdapterAnnouncements.notifyItemRemoved(itemPosition);
+                                        mAdapterAnnouncements.notifyDataSetChanged();
+
+
+                                    } else {
+
+                                        String exception;
+                                        try {
+
+                                            throw taskMyAnnouncement.getException();
+
+                                        } catch (Exception e) {
+                                            exception = e.getMessage();
+                                            e.printStackTrace();
+                                        }
+
+                                        throwToast("Delete failure: \n" + exception, true);
+                                    }
+                                });
+
+
+                        throwToast("Announcement cancelled.", false);
+
+
+                    } else {
+
+                        String exception;
+                        try {
+
+                            throw task.getException();
+
+                        } catch (Exception e) {
+                            exception = e.getMessage();
+                            e.printStackTrace();
+                        }
+
+                        throwToast("Delete failure: \n" + exception, true);
+                    }
+                });
+
+
+
+            });
+
+            alertDialog.setNegativeButton("NO", (dialog, which) -> {
+
+                throwToast("CANCELED",false);
+
+                mAdapterAnnouncements.notifyDataSetChanged();
+            });
+
+            AlertDialog alert = alertDialog.create();
+            alert.show();
+
+        });
     }
 
     /** ##################################  CLICK LISTENERS  ################################## **/
