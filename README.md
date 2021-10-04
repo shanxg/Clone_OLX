@@ -57,8 +57,8 @@
   >
   > ![del](https://user-images.githubusercontent.com/63316622/134431180-ede3fc51-43ef-409c-afbc-5b16ebd2eb7c.gif) ![del_fir](https://user-images.githubusercontent.com/63316622/134431184-c6849d61-f1bf-45b7-b4d9-9a42c8f73bd1.gif)
   >
-  >  <br>
-    ---------------------------------
+  > <br>
+  ---------------------------------
   <br />
   
   > ### <div align="center"> *Search Filters* </div> 
