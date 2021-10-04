@@ -25,7 +25,8 @@
   > ### <div align="center"> *Announcements* </div> 
   > <br> 
   >
-  > ![announcements](https://user-images.githubusercontent.com/63316622/134431123-8ac5b89b-43dc-45d9-86e9-1743bb9e1b02.gif) ![reg_fir](https://user-images.githubusercontent.com/63316622/134431135-f41a3b4c-3050-4527-8487-f917b062b973.gif) 
+  > ![OLX_announcements](https://user-images.githubusercontent.com/63316622/135891237-01178eab-6786-40b5-bf8a-a45672a73932.gif)  ![OLX_announcements(fir)](https://user-images.githubusercontent.com/63316622/135891358-66eac24b-910e-4079-b52e-5538e66cbdfb.gif)
+
   >
   > <br>
   
@@ -35,7 +36,8 @@
   > ### <div align="center"> *Login & Register* </div> 
   > <br> 
   >
-  > ![login](https://user-images.githubusercontent.com/63316622/134431152-1059a5df-7050-49b5-be97-c669fb4370c1.gif) ![exp_fir](https://user-images.githubusercontent.com/63316622/134431160-498cd12d-0c4e-4936-977d-79e611a94351.gif) 
+  >  ![OLX_login Register(fir)](https://user-images.githubusercontent.com/63316622/135892287-5acd899a-fb4b-4c39-b8c7-8dabccc14e4f.gif)
+![OLX_login Register(fir)](https://user-images.githubusercontent.com/63316622/135891986-769d6e98-0dc9-4b64-a101-0a1bc0c151c7.gif)
   >
   > <br>
   
@@ -46,7 +48,7 @@
   > ### <div align="center"> *Publishing Announcement* </div> 
   > <br> 
   >
-  > ![post](https://user-images.githubusercontent.com/63316622/134431165-e1293476-c7b5-42c2-9efb-a9fc00bb17a1.gif) ![inc_fir](https://user-images.githubusercontent.com/63316622/134431171-813b4e14-f84b-4242-b543-068616e71861.gif)
+  > ![OLX_register_post(fir)](https://user-images.githubusercontent.com/63316622/135892355-5bb6f3d1-7912-4de8-afde-4104f4601096.gif)![OLX_register_post(fir)](https://user-images.githubusercontent.com/63316622/135892378-9e132b92-c64b-401c-8425-724e4b3e330a.gif)
   >
   > <br>
   ---------------------------------
@@ -55,7 +57,7 @@
   > ### <div align="center"> *Deleting Announcement* </div> 
   > <br> 
   >
-  > ![del](https://user-images.githubusercontent.com/63316622/134431180-ede3fc51-43ef-409c-afbc-5b16ebd2eb7c.gif) ![del_fir](https://user-images.githubusercontent.com/63316622/134431184-c6849d61-f1bf-45b7-b4d9-9a42c8f73bd1.gif)
+  > ![OLX_deletePost](https://user-images.githubusercontent.com/63316622/135892527-e16ec181-2bc4-4a61-b8a6-42a773dcd083.gif)![OLX_deletePost(fir)](https://user-images.githubusercontent.com/63316622/135892552-948bf9ca-3292-4127-8eef-9d60e3de37ef.gif)
   >
   > <br>
   ---------------------------------
@@ -64,7 +66,7 @@
   > ### <div align="center"> *Search Filters* </div> 
   > <br> 
   >
-  > ![search](https://user-images.githubusercontent.com/63316622/134431180-ede3fc51-43ef-409c-afbc-5b16ebd2eb7c.gif) ![del_fir](https://user-images.githubusercontent.com/63316622/134431184-c6849d61-f1bf-45b7-b4d9-9a42c8f73bd1.gif)
+  > ![OLX_search_filters](https://user-images.githubusercontent.com/63316622/135892773-ec7de6ac-25ce-4cf2-b13d-42f2a50f1022.gif)
   >
   >  <br>
 
@@ -76,7 +78,7 @@
   
 # Check demonstration videos
 
-<video src="https://user-images.githubusercontent.com/63316622/134244855-442b3373-d039-4e7d-8d99-cedc8243e65e.mp4"> </p> | <video src="https://user-images.githubusercontent.com/63316622/134265877-a9c3bc8f-6492-4994-b204-d01ebc7ef9f8.mp4">
+<video src=""> </p> | <video src="">
 :------: | :------:
 
 </div>
