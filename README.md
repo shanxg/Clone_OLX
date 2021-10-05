@@ -25,7 +25,7 @@
   > ### <div align="center"> *Announcements* </div> 
   > <br> 
   >
-  > ![OLX_announcements](https://user-images.githubusercontent.com/63316622/135891237-01178eab-6786-40b5-bf8a-a45672a73932.gif)
+  >![OLX_announcements](https://user-images.githubusercontent.com/63316622/135944534-a6d7a80d-5b1e-4335-b504-1bda405e2c9f.gif)
   >
   > <br>
   
@@ -35,7 +35,8 @@
   > ### <div align="center"> *Login & Register* </div> 
   > <br> 
   >
-  > ![OLX_login Register](https://user-images.githubusercontent.com/63316622/135895808-bffe73e8-7bdf-4122-9f72-a8c702df1294.gif)![OLX_login Register(fir)](https://user-images.githubusercontent.com/63316622/135891986-769d6e98-0dc9-4b64-a101-0a1bc0c151c7.gif)
+  > ![OLX_login Register](https://user-images.githubusercontent.com/63316622/135946622-a4b1a615-457b-41fa-b8dc-54285d589c69.gif)
+![OLX_login Register(fir)](https://user-images.githubusercontent.com/63316622/135891986-769d6e98-0dc9-4b64-a101-0a1bc0c151c7.gif)
   >
   > <br>
   
