@@ -25,7 +25,7 @@
   > ### <div align="center"> *Announcements* </div> 
   > <br> 
   >
-  >![OLX_announcements](https://user-images.githubusercontent.com/63316622/135944534-a6d7a80d-5b1e-4335-b504-1bda405e2c9f.gif)
+  >![OLX_announcements](https://user-images.githubusercontent.com/63316622/135949178-a7f77c86-a603-4a9f-9099-f349b6a008f7.gif)
   >
   > <br>
   
@@ -35,7 +35,7 @@
   > ### <div align="center"> *Login & Register* </div> 
   > <br> 
   >
-  > ![OLX_login Register](https://user-images.githubusercontent.com/63316622/135946622-a4b1a615-457b-41fa-b8dc-54285d589c69.gif)
+  > ![OLX_login Register](https://user-images.githubusercontent.com/63316622/135949196-bfe1b997-2a69-4089-b9f1-dd77a834ec35.gif)
 ![OLX_login Register(fir)](https://user-images.githubusercontent.com/63316622/135891986-769d6e98-0dc9-4b64-a101-0a1bc0c151c7.gif)
   >
   > <br>
@@ -47,7 +47,8 @@
   > ### <div align="center"> *Publishing Announcement* </div> 
   > <br> 
   >
-  > ![OLX_register_post](https://user-images.githubusercontent.com/63316622/135895851-23ee3fba-9593-4a11-8b30-80eb29a194f9.gif)![OLX_register_post(fir)](https://user-images.githubusercontent.com/63316622/135892378-9e132b92-c64b-401c-8425-724e4b3e330a.gif)
+  > ![OLX_register_post](https://user-images.githubusercontent.com/63316622/135949284-6dea8ddb-224a-4582-b349-a77d5e004b03.gif)
+![OLX_register_post(fir)](https://user-images.githubusercontent.com/63316622/135892378-9e132b92-c64b-401c-8425-724e4b3e330a.gif)
   >
   > <br>
   ---------------------------------
@@ -56,7 +57,7 @@
   > ### <div align="center"> *Deleting Announcement* </div> 
   > <br> 
   >
-  > ![OLX_deletePost](https://user-images.githubusercontent.com/63316622/135892527-e16ec181-2bc4-4a61-b8a6-42a773dcd083.gif)![OLX_deletePost(fir)](https://user-images.githubusercontent.com/63316622/135892552-948bf9ca-3292-4127-8eef-9d60e3de37ef.gif)
+  > ![OLX_deletePost](https://user-images.githubusercontent.com/63316622/135949306-321874a9-9f0d-4b36-b7d7-f674c6820c3d.gif)![OLX_deletePost(fir)](https://user-images.githubusercontent.com/63316622/135892552-948bf9ca-3292-4127-8eef-9d60e3de37ef.gif)
   >
   > <br>
   ---------------------------------
@@ -65,7 +66,7 @@
   > ### <div align="center"> *Search Filters* </div> 
   > <br> 
   >
-  > ![OLX_search_filters](https://user-images.githubusercontent.com/63316622/135892773-ec7de6ac-25ce-4cf2-b13d-42f2a50f1022.gif)
+  > ![OLX_search_filters](https://user-images.githubusercontent.com/63316622/135949322-3457a881-e649-4c7f-9a41-27b19a32aa3e.gif)
   >
   >  <br>
 
